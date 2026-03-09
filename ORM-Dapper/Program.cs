@@ -29,14 +29,12 @@ namespace ORM_Dapper
             var categoryID = int.Parse(Console.ReadLine());
             
             repo.CreateProduct(productName, productPrice, categoryID);
-            
-            repo.CreateProduct(productName, productPrice, categoryID);
-            
+
             var products = repo.GetAllProducts();
 
             foreach (var prod in products)
             {
-                Console.WriteLine($"{prod.ProductId}- {prod.ProductName}");
+                Console.WriteLine($"{prod.ProductId} - {prod.ProductName}");
             }
 
 

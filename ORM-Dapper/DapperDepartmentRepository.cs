@@ -9,6 +9,7 @@ namespace ORM_Dapper
     
         public DapperDepartmentRepository(IDbConnection connection)
         {
+            
             _connection = connection;
         }
 
