@@ -34,7 +34,7 @@ namespace ORM_Dapper
 
             foreach (var prod in products)
             {
-                Console.WriteLine($"{prod.ProductId} - {prod.ProductName}");
+                Console.WriteLine($"{prod.ProductId}  {prod.Name}");
             }
 
 

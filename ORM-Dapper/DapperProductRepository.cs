@@ -14,7 +14,7 @@ namespace ORM_Dapper
         }
 
 
-        public void CreateProduct(string? name, double price, int categoryID)
+        public void CreateProduct(string name, double price, int categoryID)
         {
             _connection.Execute("INSERT INTO products(Name, Price, CategoryID) " + "VALUES (@name, @price, @categoryID);",
             new { name = name, price = price, categoryID = categoryID });
@@ -24,7 +24,11 @@ namespace ORM_Dapper
         {
             return _connection.Query<Product>("SELECT * FROM products;");
         }
-    
+
+        //public void CreateProduct(Product name, double price, int categoryId)
+        //{
+          //  throw new NotImplementedException();
+        //}
     }
 }
 
